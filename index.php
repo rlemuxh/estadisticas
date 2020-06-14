@@ -108,6 +108,23 @@
 </div>
 <br/>
 
+<div class="row">
+    <div class="col-md-12">
+        <h2>Recetas Emitidas en ECE</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9 demo-container" id="padre-tot-recetas-ece">
+        <div id="tot-recetas-ece" class="demo-placeholder"></div>
+    </div>
+    <div class="col-md-3">
+        <div class="col-md-3">
+            <div class="legend" id="legendTotRecetasECE" style="width: 9em;height: 8em;"></div>
+        </div>
+    </div>
+</div>
+<br/>
+
 <script src="jquery/jquery-1.11.1.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="jquery/jquery.event.drag.js"></script>
@@ -133,6 +150,7 @@
 <script src="js/totalRecetaResurtible.js"></script>
 <script src="js/totalRecetasTranscripcion.js"></script>
 <script src="js/totalConsultasECE.js"></script>
+<script src="js/totalRecetasECE.js"></script>
 
 <!--<script src="flot/source/jquery.flot.pie.js"></script>
 <script src="flot/source/jquery.flot.categories.js"></script>-->
@@ -252,6 +270,18 @@
             }
         });
 
+        $.ajax({
+            url: 'operaciones/getTotRecetasECE.php',
+            type: 'post',
+            cache: false,
+            success: function(data) {
+                if(data){
+                    var infoTotRecetasECE = JSON.parse(data);
+                    showChartTotRecetasECE(infoTotRecetasECE);
+                }
+            }
+        });
+
     });
 
     $("#demo-container #placeholder").UseTooltip("Recetas :");
@@ -260,6 +290,7 @@
     $("#padre-tot-rec-resurt #tot-rec-resurt").UseTooltip("Recetas :");
     $("#padre-tot-rec-transcrip #tot-rec-transcrip").UseTooltip("Recetas :");
     $("#padre-tot-consul-ece #tot-consul-ece").UseTooltip("% Uso :");
+    $("#padre-tot-recetas-ece #tot-recetas-ece").UseTooltip("Recetas: ");
 </script>
 </body>
 </html>
