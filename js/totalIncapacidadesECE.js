@@ -8,5 +8,45 @@ function showChartTotIncapacidadesECE(data) {
     ];
 
     var legendContIncapacidadesECE = document.getElementById("legendTotIncapacidadesECE");
-    $.plot("#tot-incapacidades-ece", datosTotIncapacidadesECE, {legend: { show: true, position: "se", noColumns: 1, container: legendContIncapacidadesECE }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    var charOptions = {
+        legend: {
+            show: true,
+            position: "se",
+            noColumns: 1,
+            container: legendContIncapacidadesECE
+        },
+
+        series: {
+            lines:
+                {
+                    show: false
+                }
+        },
+
+        grid: {
+            hoverable: true,
+            clickable: true
+        },
+
+        zoom: {
+            interactive: true
+        },
+
+        pan: {
+            interactive: true,
+            enableTouch: true
+        },
+
+        xaxis: {
+            position: 'bottom',
+            axisLabel: 'No. de Semana',
+            axisLabelUseCanvas: true,
+            color: 'black'
+        },
+
+        yaxis: {
+            axisLabel: '% de Uso'
+        }
+    };
+    $.plot("#tot-incapacidades-ece", datosTotIncapacidadesECE, charOptions);
 }
