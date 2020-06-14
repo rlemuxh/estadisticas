@@ -161,6 +161,7 @@
 <script src="flot/source/jquery.flot.touchNavigate.js"></script>
 <script src="flot/source/jquery.flot.selection.js"></script>
 <script src="flot/source/jquery.flot.touch.js"></script>
+<script src="flot/source/jquery.flot.axislabels.js"></script>
 <script src="js/recetas.js"></script>
 <script src="js/usoSimf.js"></script>
 <script src="js/numeroIncapacidades.js"></script>
