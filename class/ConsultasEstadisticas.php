@@ -102,7 +102,7 @@ class ConsultasEstadisticas extends ConectaBD
         return $this->results;
     }
 
-    public function consultaUsoRecetas($unidad) {
+    public function consultaUsoRecetasECE($unidad) {
         $this->results = array();
         $consultaUsoRecetasECE = "select semana, uso_recetas from est_simf.tbl_ind_ece where unidad like '$unidad' order by semana";
         $execUsoRecetasECE = $this->_db->query($consultaUsoRecetasECE);
