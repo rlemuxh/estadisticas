@@ -115,7 +115,7 @@ class ConsultasEstadisticas extends ConectaBD
 
     public function consultaUsoIncapacidadesECE($unidad) {
         $this->results = array();
-        $consultaUsoIncapacidades = "select semana, uso_incapacidades from est.tbl_ind_ece where unidad like '$unidad' order by semana";
+        $consultaUsoIncapacidades = "select semana, uso_incapacidades from est_simf.tbl_ind_ece where unidad like '$unidad' order by semana";
         $execUsoIncapacidades = $this->_db->query($consultaUsoIncapacidades);
         while($resultUsoIncapacidades = $execUsoIncapacidades->fetch_array(MYSQLI_ASSOC)) {
             $this->results[] = $resultUsoIncapacidades;
