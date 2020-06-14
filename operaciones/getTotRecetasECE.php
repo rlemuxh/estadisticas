@@ -16,7 +16,7 @@ for ($i = 0; $i < $longitudArrayUnidades; $i++) {
 
     $concentradoTotRecetasECE = array();
     for ($recorreoTotRecetasECE = 0; $recorreoTotRecetasECE < $longitudArray; $recorreoTotRecetasECE++) {
-        $concentradoTotRecetasECE[] = array(intval($listaTotRecetasECE[$recorreoTotRecetasECE]["semana"]), intval($listaTotRecetasECE[$recorreoTotRecetasECE]["uso_recetas"]));
+        $concentradoTotRecetasECE[] = array(intval($listaTotRecetasECE[$recorreoTotRecetasECE]["semana"]), (floatval($listaTotRecetasECE[$recorreoTotRecetasECE]["uso_recetas"])*100));
     }
 
     $numTotalRecetasECE[] = $concentradoTotRecetasECE;
