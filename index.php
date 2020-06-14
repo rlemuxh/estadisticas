@@ -290,7 +290,7 @@
     $("#padre-tot-rec-resurt #tot-rec-resurt").UseTooltip("Recetas :");
     $("#padre-tot-rec-transcrip #tot-rec-transcrip").UseTooltip("Recetas :");
     $("#padre-tot-consul-ece #tot-consul-ece").UseTooltip("% Uso :");
-    $("#padre-tot-recetas-ece #tot-recetas-ece").UseTooltip("Recetas: ");
+    $("#padre-tot-recetas-ece #tot-recetas-ece").UseTooltip("% Recetas: ");
 </script>
 </body>
 </html>
