@@ -22,5 +22,5 @@ function showChartNumIncapacidades(data) {
     ];
     //console.log(datosUsoSimf);
     var legendContUsoSimf = document.getElementById("legendNumIncap");
-    $.plot("#num-incap", datosNumIncapacidades, {legend: { show: true, position: "se", noColumns: 1, container: legendContUsoSimf }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#num-incap", datosNumIncapacidades, {legend: { show: true, position: "se", noColumns: 1, container: legendContUsoSimf }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel: 'No. de Semana'}, yaxis: { axisLabel: 'No. de Incapacidades'} });
 }

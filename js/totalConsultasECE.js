@@ -8,5 +8,5 @@ function showChartTotConsultasECE(data) {
     ];
 
     var legendContConsultasECE = document.getElementById("legendTotConsultasECE");
-    $.plot("#tot-consul-ece", datosTotConsultasECE, {legend: { show: true, position: "se", noColumns: 1, container: legendContConsultasECE }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#tot-consul-ece", datosTotConsultasECE, {legend: { show: true, position: "se", noColumns: 1, container: legendContConsultasECE }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel:'No. de Semana' }, yaxis: { axisLabel: '% de Consultas' } });
 }

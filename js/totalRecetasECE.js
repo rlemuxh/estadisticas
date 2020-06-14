@@ -8,5 +8,5 @@ function showChartTotRecetasECE(data) {
     ];
 
     var legendContRecetasECE = document.getElementById("legendTotRecetasECE");
-    $.plot("#tot-recetas-ece", datosTotRecetasECE, {legend: { show: true, position: "se", noColumns: 1, container: legendContRecetasECE }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#tot-recetas-ece", datosTotRecetasECE, {legend: { show: true, position: "se", noColumns: 1, container: legendContRecetasECE }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel: 'No. de Semana' }, yaxis: { axisLabel: '% de Uso' } });
 }

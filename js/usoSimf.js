@@ -22,5 +22,5 @@ function showChartUsoSimf(data) {
     ];
     //console.log(datosUsoSimf);
     var legendContUsoSimf = document.getElementById("legendUsoSimf");
-    $.plot("#uso-simf", datosUsoSimf, {legend: { show: true, position: "se", noColumns: 1, container: legendContUsoSimf }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#uso-simf", datosUsoSimf, {legend: { show: true, position: "se", noColumns: 1, container: legendContUsoSimf }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel: 'No. de Semana' }, yaxis: { axisLabel: '% de Uso' } });
 }

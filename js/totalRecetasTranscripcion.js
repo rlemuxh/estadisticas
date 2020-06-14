@@ -20,5 +20,5 @@ function showChartTotRecTranscripcion(data) {
     ];
 
     var legendContRecTranscripcion = document.getElementById("legendTotRecTranscrip");
-    $.plot("#tot-rec-transcrip", datosTotRecTranscripcion, {legend: { show: true, position: "se", noColumns: 1, container: legendContRecTranscripcion }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#tot-rec-transcrip", datosTotRecTranscripcion, {legend: { show: true, position: "se", noColumns: 1, container: legendContRecTranscripcion }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel: 'No. de Semana' }, yaxis: { axisLabel: 'No. de Recetas' } });
 }

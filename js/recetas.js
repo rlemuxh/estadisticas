@@ -21,5 +21,5 @@ function showChartRecetas(data) {
         { label: data[30], data: data[31], lines: { show: true, fill: false, lineWidth: 5 }, points: {show: true, radius: 5} }
     ];
     var legendContainer = document.getElementById("legendContainer");
-    $.plot("#placeholder", dataset, {legend: { show: true, position: "se", noColumns: 1, container: legendContainer }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#placeholder", dataset, {legend: { show: true, position: "se", noColumns: 1, container: legendContainer }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel: 'No. de Semana'}, yaxis: {axisLabel: 'No. de Recetas'} });
 }

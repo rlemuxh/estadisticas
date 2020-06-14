@@ -20,5 +20,5 @@ function showChartTotRecResurt(data) {
     ];
 
     var legendContUsoSimf = document.getElementById("legendTotRecResurt");
-    $.plot("#tot-rec-resurt", datosTotRecResurt, {legend: { show: true, position: "se", noColumns: 1, container: legendContUsoSimf }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true} });
+    $.plot("#tot-rec-resurt", datosTotRecResurt, {legend: { show: true, position: "se", noColumns: 1, container: legendContUsoSimf }, series: {lines: {show: false } }, grid: { hoverable: true, clickable: true }, zoom: {interactive: true}, pan: {interactive: true, enableTouch: true}, xaxis: { axisLabel: 'No. de Semana' }, yaxis: { axisLabel: '% de Uso' } });
 }
