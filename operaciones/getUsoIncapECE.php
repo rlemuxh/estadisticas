@@ -21,6 +21,5 @@ for ($i = 0; $i < $longitudArrayUnidades; $i++) {
 
     $numTotalIncapacidadesECE[] = $concentradoTotIncapacidadesECE;
 }
-//var_dump($numTotalConsultasECE);
 
 echo json_encode($numTotalIncapacidadesECE);
