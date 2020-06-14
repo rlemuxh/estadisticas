@@ -125,6 +125,23 @@
 </div>
 <br/>
 
+<div class="row">
+    <div class="col-md-12">
+        <h2>Incapacidades Emitidas en ECE</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9 demo-container" id="padre-tot-incapacidades-ece">
+        <div id="tot-incapacidades-ece" class="demo-placeholder"></div>
+    </div>
+    <div class="col-md-3">
+        <div class="col-md-3">
+            <div class="legend" id="legendTotIncapacidadesECE" style="width: 9em;height: 8em;"></div>
+        </div>
+    </div>
+</div>
+<br/>
+
 <script src="jquery/jquery-1.11.1.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="jquery/jquery.event.drag.js"></script>
@@ -151,6 +168,7 @@
 <script src="js/totalRecetasTranscripcion.js"></script>
 <script src="js/totalConsultasECE.js"></script>
 <script src="js/totalRecetasECE.js"></script>
+<script src="js/totalIncapacidadesECE.js"></script>
 
 <!--<script src="flot/source/jquery.flot.pie.js"></script>
 <script src="flot/source/jquery.flot.categories.js"></script>-->
@@ -282,6 +300,18 @@
             }
         });
 
+        $.ajax({
+            url: 'operaciones/getUsoIncapECE.php',
+            type: 'post',
+            cache: false,
+            success: function(data){
+                if(data){
+                    var infoTotIncapECE = JSON.parse(data);
+                    showChartTotIncapacidadesECE(infoTotIncapECE);
+                }
+            }
+        });
+
     });
 
     $("#demo-container #placeholder").UseTooltip("Recetas :");
@@ -290,7 +320,8 @@
     $("#padre-tot-rec-resurt #tot-rec-resurt").UseTooltip("Recetas :");
     $("#padre-tot-rec-transcrip #tot-rec-transcrip").UseTooltip("Recetas :");
     $("#padre-tot-consul-ece #tot-consul-ece").UseTooltip("% Uso :");
-    $("#padre-tot-recetas-ece #tot-recetas-ece").UseTooltip("% Recetas: ");
+    $("#padre-tot-recetas-ece #tot-recetas-ece").UseTooltip("% Recetas :");
+    $("#padre-tot-incapacidades-ece #tot-incapacidades-ece").UseTooltip("% Incapacidades :");
 </script>
 </body>
 </html>
